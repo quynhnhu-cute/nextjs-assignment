@@ -2,6 +2,7 @@
 import { blogList } from "@/mockdata";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+
 const CreateNewPostPage = () => {
   const router = useRouter();
   const [isError, setIsError] = useState(false);
@@ -27,6 +28,10 @@ const CreateNewPostPage = () => {
       [event.target.name]: event.target.value,
     });
   };
+
+  const handleCancel = () => {
+    router.push("/")
+  }
   return (
     <div className="create-post">
       <h1>Create A New Post</h1>
@@ -68,7 +73,7 @@ const CreateNewPostPage = () => {
               onChange={handleChange}
             />
           </div>
-          <button className="btn btn-danger button">Cancel</button>
+          <button className="btn btn-danger button" onClick={handleCancel}>Cancel</button>
           <button type="submit" className="btn btn-success button">
             Submit
           </button>

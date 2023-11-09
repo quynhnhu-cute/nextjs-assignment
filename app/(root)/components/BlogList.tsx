@@ -1,5 +1,3 @@
-"use client";
-
 import { blogList } from "@/mockdata";
 import BlogItem from "./BlogItem";
 
