@@ -1,0 +1,24 @@
+.center-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+h1 {
+    text-align: center;
+}
+.form {
+    padding: 20px;
+    border: 1px solid rgb(228, 223, 223);
+    border-radius: 5px;
+}
+.button {
+    margin-right: 10px;
+    text-align: right
+}
