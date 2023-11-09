@@ -1,15 +1,9 @@
 "use client";
 import { blogList } from "@/mockdata";
-import { auth } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 const CreateNewPostPage = () => {
   const router = useRouter();
-  const { userId } = auth();
-  if (!userId) {
-    router.push("sign-in");
-  }
-
   const [isError, setIsError] = useState(false);
   const [formData, setFormData] = useState({
     title: "",
